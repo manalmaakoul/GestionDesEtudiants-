@@ -1,0 +1,20 @@
+﻿@model Cours
+@{
+
+    <h2>Confirmer la suppression du cours</h2>
+    <p>Êtes-vous sûr de vouloir supprimer le cours suivant ?</p>
+
+    <div>
+        <p><strong>Nom :</strong> @Model.Nom</p>
+        <p><strong>Volume Horaire :</strong> @Model.Volume_horaire</p>
+    </div>
+
+    <form asp-action="ConfirmerSuppression" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Confirmer la suppression</button>
+        <a asp-action="ListCours" class="btn btn-secondary">Annuler</a>
+</form>
+    // <a asp-action="ListCours" class="btn btn-secondary">Annuler</a>
+
+
+}

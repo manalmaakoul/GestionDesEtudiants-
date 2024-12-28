@@ -1,0 +1,35 @@
+# Ignorer les dossiers générés automatiquement
+GestionEtudiantsProjet/bin/
+GestionEtudiantsProjet/obj/
+
+TestGestionEtudiants/bin/
+TestGestionEtudiants/obj/
+
+
+
+# Ignorer les fichiers de migration
+GestionEtudiantsProjet/Migrations/
+
+# Ignorer les fichiers de configuration sensibles ou spécifiques à l'utilisateur
+GestionEtudiantsProjet/appsettings.Development.json
+*.user
+*.lock.json
+
+# Ignorer les fichiers de build et de débogage
+*.log
+.vs/
+.vscode/
+**/*.swp
+**/*.suo
+
+# Ignorer les fichiers de dépendances locales
+packages/
+node_modules/
+
+# Ignorer les fichiers temporaires
+*.tmp
+*.temp
+
+# Ignorer les fichiers de l'IDE Visual Studio
+.vs/
+.vscode/

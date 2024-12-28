@@ -1,0 +1,59 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    /*font-family: monospace,'Lucida Bright';*/
+    color: black;
+    line-height: 1;
+    font-weight: 400;
+}
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+}
+    .styled-table thead tr {
+        background-color: #1d1160;
+       
+        color: white;
+    }
+
+
+    .styled-table th,
+    .styled-table td {
+        padding: 15px 13px;
+        border-bottom: 1px solid #ddd
+    }
+
+/*.lienAjouter {
+    color: darkblue;
+    text-decoration: none;
+    text-transform: uppercase;
+}*/
+
+
+.lienAjouter {
+    background-position: 0 100%;
+    text-decoration: none;
+    color: rebeccapurple;
+    /*text-transform: uppercase;*/
+}
+
+    .lienAjouter:hover {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+        background-size: auto 6px;
+        background-repeat: repeat-x;
+        text-decoration: none;
+        color: deeppink;
+        text-transform: uppercase;
+    }
+.two {
+    text-align: center;
+    color: #35495e;
+}
+    
+
+

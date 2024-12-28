@@ -1,0 +1,35 @@
+﻿@model List<GestionEtudiantsProjet.Models.Cours>
+
+<h2>Cours enseignés par cet enseignant</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nom du Cours</th>
+            <th>Volume Horaire</th>
+            <th>Enseignants</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cours in Model)
+        {
+            <tr>
+                <td>@cours.Nom</td>
+                <td>@cours.Volume_horaire</td>
+                <td>
+                    @if (cours.Enseignants != null)
+                    {
+                        foreach (var enseignant in cours.Enseignants)
+                        {
+                            <p>@enseignant.Nom</p>
+                        }
+                    }
+                    else
+                    {
+                        <p>Aucun enseignant</p>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

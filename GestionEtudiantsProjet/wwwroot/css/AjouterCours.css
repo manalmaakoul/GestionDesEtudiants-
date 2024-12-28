@@ -1,0 +1,109 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.two {
+    text-align: center;
+    color: #35495e;
+}
+
+body {
+    line-height: 1.7;
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+    /*background-color: #D8BFD8; ask for opinion */
+}
+/*#FBCEB1*/
+.row {
+    display: flex;
+    padding: 30px;
+    flex-direction:row;
+    gap:200px;
+    justify-content:center;
+}
+
+.col-md-4 {
+    height:400px;
+    line-height: 40px;
+    padding: 30px;
+    background: white;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /*flex: 1; */
+    /*max-width: 50%;*/ /* Limiter la largeur */
+}
+
+.imageajouter {
+    max-width: 40%;
+    height: 400px;
+    display: flex;
+    /*border-radius:50px;*/
+}
+a{
+    color:rebeccapurple;
+    text-decoration:none;
+}
+    a:hover {
+        text-decoration: none;
+        color: deeppink;
+        text-transform: uppercase;
+    }
+
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io-button {
+    margin:auto;
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+    .cssbuttons-io-button .icon {
+        background: white;
+        margin-left: 1em;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.2em;
+        width: 2.2em;
+        border-radius: 0.7em;
+        box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+        right: 0.3em;
+        transition: all 0.3s;
+    }
+
+    .cssbuttons-io-button:hover .icon {
+        width: calc(100% - 0.6em);
+    }
+
+    .cssbuttons-io-button .icon svg {
+        width: 1.1em;
+        transition: transform 0.3s;
+        color: #7b52b9;
+    }
+
+    .cssbuttons-io-button:hover .icon svg {
+        transform: translateX(0.1em);
+    }
+
+    .cssbuttons-io-button:active .icon {
+        transform: scale(0.95);
+    }

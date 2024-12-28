@@ -1,0 +1,131 @@
+﻿/* Style général de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF1F4 ;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du conteneur principal */
+.row {
+    display: flex;
+    padding: 30px;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: center;
+}
+
+.col-md-4 {
+    background-color: #ffffff;
+    border-radius: 30px;
+    /*box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;*/
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+/* Titres */
+h1 {
+    margin:30px;
+    text-align: center;
+    color: #35495e;
+}
+
+
+
+/* Style des champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+   
+}
+.form-group-btn {
+    display: flex;
+    justify-content: center;
+}
+}
+
+.control-label {
+    font-weight: bold;
+    color: #555;
+    
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+/* Boutons */
+.Btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 130px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: #fff44f;
+   /* color: rgb(140, 32, 212);*/
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+    transition-duration: .3s;
+}
+
+.svg {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    /*fill: white;*/
+    transition-duration: .3s;
+}
+
+.Btn:hover {
+    color: transparent;
+}
+
+    .Btn:hover svg {
+        right: 43%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        transition-duration: .3s;
+    }
+
+.Btn:active {
+    transform: translate(3px, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+
+/* Lien de retour */
+a {
+    color: rebeccapurple;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: none;
+        color: deeppink;
+        text-transform: uppercase;
+    }
+
+/*Image*/
+.imageaModifier {
+    max-width: 40%;
+    height: 400px;
+    display: flex;
+    /*border-radius:50px;*/
+}

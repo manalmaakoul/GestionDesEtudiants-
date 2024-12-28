@@ -1,0 +1,28 @@
+﻿@model GestionEtudiantsProjet.ViewModels.AffecterCoursViewModel
+
+<h2>Affecter un Cours à un Enseignant</h2>
+
+<form asp-action="AffecterCours" method="post" asp-controller="Administrateur">
+    <div>
+        <label for="cours">Sélectionnez un Cours :</label>
+        <select id="cours" name="coursId">
+            @foreach (var cours in Model.CoursList)
+            {
+                <option value="@cours.Id">@cours.Nom</option>
+            }
+        </select>
+    </div>
+
+    <div>
+        <label for="enseignant">Sélectionnez un Enseignant :</label>
+        <select id="enseignant" name="enseignantId">
+            @foreach (var enseignant in Model.EnseignantList)
+            {
+                <option value="@enseignant.Id">@enseignant.Nom</option>
+            }
+        </select>
+    </div>
+
+    <button type="submit">Affecter</button>
+</form>
+

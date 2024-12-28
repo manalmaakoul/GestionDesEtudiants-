@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GestionEtudiantsProjet.ViewModels.ListCoursViewModel>
+
+@{
+    ViewData["Title"] = "ListCours";
+}
+<link rel="stylesheet" href="~/css//ListCours.css" />
+<h1 class="two">Liste des cours</h1>
+
+<p>
+    <a asp-action="AjouterCours" class="lienAjouter">Ajouter un cours</a>
+</p>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                Volume Horaire
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Volume_horaire)
+            </td>
+            <td>
+                    <a class="btn btn-danger" asp-controller="Administrateur" asp-action="SupprimerCours" asp-route-Id="@item.Id">Supprimer</a>
+                    <a class="btn btn-warning" asp-controller="Administrateur" asp-action="ModifierCours" asp-route-Id="@item.Id">Modifier</a>
+
+                @* @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
