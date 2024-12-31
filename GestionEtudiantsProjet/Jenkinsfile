@@ -1,0 +1,56 @@
+pipeline {
+    agent any  // Utiliser un agent disponible sur la machine hôte, sans Docker
+     environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerHubCredentials') // Docker Hub credentials
+        DOCKER_IMAGE = 'manalmk/crmef:latest' // Docker image
+        SONAR_SCANNER_HOME = tool 'SonarScanner for MSBuild' // SonarScanner tool name configured in Jenkins
+    }
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/manalmaakoul/GestionDesEtudiants-.git'
+            }
+        }
+        stage('SonarQube Analysis - Begin') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    sh "dotnet ${SONAR_SCANNER_HOME}/SonarScanner.MSBuild.dll begin /k:\"ProjetSonar\""
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'dotnet build --configuration Release'
+            }
+        }
+        stage('SonarQube Analysis - End') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    sh "dotnet ${SONAR_SCANNER_HOME}/SonarScanner.MSBuild.dll end"
+                }
+            }
+        }
+        stage('Creation de limage docker avec un tag ') {
+            steps {
+                sh 'docker build -t $DOCKER_IMAGE -f GestionEtudiantsProjet/Dockerfile .'
+            }
+        }
+        stage('Login to docker hub') {
+            steps {
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+            }
+        }
+        stage('Push image to docker hub') {
+            steps {
+                sh 'docker push $DOCKER_IMAGE'
+            }
+        }
+        stage('Deploy project') {
+            steps {
+                sh 'docker run -d -p 8090:80  $DOCKER_IMAGE'
+            }
+        }
+        
+        
+    }
+}
