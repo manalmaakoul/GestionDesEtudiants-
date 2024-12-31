@@ -17,6 +17,10 @@ namespace GestionEtudiantsProjet.Controllers
         {
             return View();
         }
+        public IActionResult CRMEF()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
